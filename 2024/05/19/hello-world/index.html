@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,14 @@
   
 
   
-    <meta name="author" content="John Doe">
+    <meta name="author" content="鶴守丶葉七">
   
 
   
 
   
 
-  <title>Hello World | Hexo</title>
+  <title>Hexo使用心得&amp;避坑指南 | Hexo</title>
 
   
 
@@ -102,16 +102,16 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">Hexo使用心得&amp;避坑指南</h1>
           <h2 class="title-sub-wrap">
-            <strong>John Doe</strong>
+            <strong>鶴守丶葉七</strong>
             <span>发布于</span>
             <time  class="article-date" datetime="2024-05-19T07:14:15.512Z" itemprop="datePublished">2024-05-19</time>
           </h2>
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-08-24T10:49:31.219Z" itemprop="dateUpdated">2024-08-24</time>
+              <time  class="article-updated" datetime="2024-08-24T11:38:09.963Z" itemprop="dateUpdated">2024-08-24</time>
             </h2>
           
           
@@ -143,23 +143,12 @@
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         
-    <div id="aplayer-WgznURyg" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-mNDTIGvo" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="2604586574" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
-
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Git和node.js官网安装速度是真慢…最好提前找一个镜像站<br>Git的npm安装速度倒还是可以的，唯一要吐槽的就是GBH改了一大堆快捷键…复制命令的时候超级难受，另外不知道为什么cd命令没用，一开始看见那一大堆报错信息真的心肺骤停<br>hexo-deployer-git插件不知道为什么安装得特别慢，换源也没用，等了十多分钟</p>
+<h3 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h3><p>拿markdown写blog确实很方便也很适合初学者，但是不能实时上传，需要手动输入命令，拿hexo server命令本地测试网页倒是很友好</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>从这一步开始可真是折磨了，首先我选择的是Gitee，想着既然是国内的代码托管平台速度肯定快 ，结果发现Gitee pages要实名认证<br>…再见<br>最后还是选择了Github pages，即上传即用，不用弄一大堆乱七八糟的东西。站点资源1GB，每月流量10GB的配额在博客初期使用绰绰有余。<br>用Github创建一个储存库，运行Git全局设置，添加密钥，配置，再在.config文件最后添加SSH，最后hexo d上传一气呵成<br>这里降智了，上传的时候一直报错，原来是没挂加速器<br>上传之后储存库里应该就有代码文件了，用Github pages部署就能直接用后缀为.github.io的网址访问了<br>至此，总算是折腾完了</p>
 
       </section>
 
@@ -183,13 +172,13 @@
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-body">
     
-      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="Sukoshi">
+      <img src="https://cdn.luogu.com.cn/upload/image_hosting/zgc7yib1.png" class="soft-size--round soft-style--box" alt="鶴守丶葉七">
     
     
-      <h2>Sukoshi</h2>
+      <h2>鶴守丶葉七</h2>
     
     
-      <p>贵在坚持</p>
+      <p>Fate\come\true</p>
     
 
     <div class="count-box">
@@ -226,7 +215,7 @@
     <span>NOTICE</span>
   </div>
   <div class="widget-body">
-    <p>flex-block主题部分重构，详情查看https://github.com/miiiku/flex-block</p>
+    <p>这个古早的项目复活了</p>
   </div>
 </section>
 
@@ -292,7 +281,7 @@
       
     </div>
      
-    <p>&copy; 2024 <a href="/" target="_blank">John Doe</a></p>
+    <p>&copy; 2024 <a href="/" target="_blank">鶴守丶葉七</a></p>
 
     
 
