@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>写于8月26日暴雨天气：晴天 | Hexo</title>
+    <meta name="author" content="鶴守丶葉七" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEXO</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEXO</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>写于8月26日暴雨天气：晴天</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/8/26
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        
+        <div id="aplayer-WubVFQWF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+            <pre class="aplayer-lrc-content">[00:00:00] 晴天的LRC歌词，下载歌词请复制下面的内容保存为.lrc文件
+[00:00:00] 晴天 - 周杰伦
+[00:28:00] 故事的小黄花
+[00:32:00] 从出生那年就飘着
+[00:35:00] 童年的荡秋千
+[00:39:00] 随记忆一直晃到现在
+[00:42:00] rui sou sou xi dou xi la
+[00:45:00] sou la xi xi xi xi la xi la sou
+[00:49:00] 吹着前奏望着天空
+[00:52:00] 我想起花瓣试着掉落
+[00:56:00] 为你翘课的那一天
+[00:58:00] 花落的那一天
+[01:00:00] 教室的那一间
+[01:01:00] 我怎么看不见
+[01:03:00] 消失的下雨天
+[01:05:00] 我好想再淋一遍
+[01:09:00] 没想到失去的勇气我还留着
+[01:15:00] 好想再问一遍
+[01:17:00] 你会等待还是离开
+[01:24:00] 刮风这天我试过握着你手
+[01:30:00] 但偏偏雨渐渐大到我看你不见
+[01:38:00] 还要多久我才能在你身边
+[01:44:00] 等到放晴的那天也许我会比较好一点
+[01:52:00] 从前从前有个人爱你很久
+[01:58:00] 但偏偏风渐渐把距离吹得好远
+[02:06:00] 好不容易又能再多爱一天
+[02:12:00] 但故事的最后你好像还是说了拜拜
+[02:33:00] 为你翘课的那一天
+[02:36:00] 花落的那一天
+[02:38:00] 教室的那一间
+[02:39:00] 我怎么看不见
+[02:41:00] 消失的下雨天
+[02:43:00] 我好想再淋一遍
+[02:47:00] 没想到失去的勇气我还留着
+[02:53:00] 好想再问一遍
+[02:55:00] 你会等待还是离开
+[03:02:00] 刮风这天我试过握着你手
+[03:08:00] 但偏偏雨渐渐大到我看你不见
+[03:16:00] 还要多久我才能在你身边
+[03:23:00] 等到放晴的那天也许我会比较好一点
+[03:30:00] 从前从前有个人爱你很久
+[03:36:00] 但偏偏风渐渐把距离吹得好远
+[03:44:00] 好不容易又能再多爱一天
+[03:51:00] 但故事的最后你好像还是说了拜拜
+[03:57:00] 刮风这天我试过握着你手
+[04:01:00] 但偏偏雨渐渐大到我看你不见
+[04:04:00] 还要多久我才能够在你身边
+[04:08:00] 等到放晴那天也许我会比较好一点
+[04:12:00] 从前从前有个人爱你很久
+[04:15:00] 但偏偏雨渐渐把距离吹得好远
+[04:19:00] 好不容易又能再多爱一天
+[04:22:00] 但故事的最后你好像还是说了拜</pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-WubVFQWF"),
+            narrow: false,
+            autoplay: true,
+            showlrc: 2,
+            music: {
+              title: "晴天",
+              author: "周杰伦",
+              url: "晴天.mp3",
+              pic: "/2024/08/26/sunny%20day/picture.jpg",
+              lrc: "晴天.txt"
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a>壹</h3><p><font color=DarkGray>故事的小黄花 从出生那年就飘着</font><br><font color=DarkGray>童年的荡秋千 随记忆一直晃到现在</font><br><font color=DarkGray>Re So So Si Do Si La So  La Si Si Si Si La Si La So</font><br><font color=DarkGray>吹着前奏 望着天空 我想起花瓣 试着掉落</font>  </p>
+<hr>
+<span id="more"></span>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 Hexo
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;鶴守丶葉七
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
